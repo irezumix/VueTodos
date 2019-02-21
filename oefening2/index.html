@@ -39,8 +39,10 @@
             },
             methods: {
                 addTodo() {
-                    this.todos.push(this.newTodo);
-                    this.newTodo = '';
+                    if (this.newTodo.length > 0) {
+                        this.todos.push(this.newTodo);
+                        this.newTodo = '';
+                    }
                 }
             }
         })
