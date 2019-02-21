@@ -10,7 +10,8 @@
 
 <body>
     <div id="app">
-        <p>
+        <h1>Hallo: {{name}} </h1>
+        <p v-bind:title="message_hover">
             Bericht van Vue: {{ message }}
         </p>
 
@@ -25,7 +26,9 @@
         var app = new Vue({
             el: '#app',
             data: {
-                message: 'Hello from Vue!'
+                message: 'Hello from Vue!',
+                message_hover: 'This is the message Vue hover',
+                name: "Dille"
             }
         })
     </script>
