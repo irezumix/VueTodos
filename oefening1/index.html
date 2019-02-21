@@ -10,6 +10,9 @@
 
 <body>
     <div id="app">
+        <p>
+            Bericht van Vue: {{ message }}
+        </p>
 
     </div>
 
@@ -19,9 +22,12 @@
 
     <!-- VUE -->
     <script>
-
-
-
+        var app = new Vue({
+            el: '#app',
+            data: {
+                message: 'Hello from Vue!'
+            }
+        })
     </script>
 
 
