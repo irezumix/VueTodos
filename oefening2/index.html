@@ -13,7 +13,7 @@
         <h1>Todo app</h1>
         <hr>
         Add new todo: <input type="text" v-model="newTodo">
-        <button @click="addTodo">add</button>
+        <button v-bind:disabled="newTodo.length==0" @click="addTodo">add</button>
         <hr>
 
         <p v-if=" !todos.length">No
