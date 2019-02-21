@@ -20,7 +20,7 @@
             todos yet...</p>
         <ul v-else>
             <li v-for="(todo, index) in todos">{{todo}} - <input type="checkbox"> -
-                <button @click="todos.splice(index,1)">X</button>
+                <button @click="deleteTodo(index)">X</button>
             </li>
         </ul>
     </div>
@@ -43,6 +43,9 @@
                         this.todos.push(this.newTodo);
                         this.newTodo = '';
                     }
+                },
+                deleteTodo(index) {
+                    this.todos.splice(index, 1)
                 }
             }
         })
